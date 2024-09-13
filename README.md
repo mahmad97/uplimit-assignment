@@ -1,2 +1,3 @@
 # Uplimit Assignment
-Take-home assignment from uplimit
+
+Takehome assignment for Uplimit. Made by Mohammad Ahmad.
