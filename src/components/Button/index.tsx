@@ -1,12 +1,12 @@
-import type { ReactElement, ReactNode } from 'react';
-
-import { buttonTextStyle } from 'components/Typography';
+import type { MouseEventHandler, ReactElement, ReactNode } from 'react';
 
 type ButtonProps = Readonly<{
 	id: string;
-	type: 'submit';
+	type?: 'submit' | 'button' | 'reset';
 	name: string;
 	disabled?: boolean;
+	className?: string;
+	onClick?: MouseEventHandler<HTMLButtonElement>;
 	children: ReactNode;
 }>;
 
@@ -17,10 +17,11 @@ const Button = (props: ButtonProps): ReactElement => {
 	return (
 		<button
 			id={props.id}
-			type={props.type}
+			type={props.type ?? 'button'}
 			name={props.name}
 			disabled={props.disabled}
-			className={`py-2 px-4 ${backgroundStyle} ${buttonTextStyle} rounded-md`}>
+			className={`py-2 px-4 ${backgroundStyle} text-base font-bold text-neutral-100 rounded-md ${props.className}`}
+			onClick={props.onClick}>
 			{props.children}
 		</button>
 	);

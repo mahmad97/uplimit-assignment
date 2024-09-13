@@ -3,8 +3,6 @@ import type { ReactElement, ReactNode } from 'react';
 
 import { Inter } from 'next/font/google';
 
-import TopBar from 'components/Topbar';
-
 import './globals.css';
 
 type RootLayoutProps = Readonly<{
@@ -12,7 +10,7 @@ type RootLayoutProps = Readonly<{
 }>;
 
 const metadata: Metadata = {
-	title: 'Uplimit Assisgnment',
+	title: 'Uplimit Assignment',
 	description: 'Made by Mohammad Ahmad',
 };
 
@@ -25,10 +23,7 @@ const inter = Inter({
 const RootLayout = (props: RootLayoutProps): ReactElement => {
 	return (
 		<html lang='en' className={inter.variable}>
-			<body className='bg-slate-100 min-w-[640px]'>
-				<TopBar />
-				{props.children}
-			</body>
+			<body className='bg-slate-100 min-w-[640px]'>{props.children}</body>
 		</html>
 	);
 };
