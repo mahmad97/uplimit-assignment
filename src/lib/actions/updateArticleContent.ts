@@ -8,7 +8,7 @@ import { promises } from 'fs';
 const updateArticleContent = async (articleContent: string) => {
 	try {
 		await promises.writeFile(
-			process.cwd() + '/public/content.txt',
+			process.cwd() + '/public/content.html',
 			articleContent,
 			'utf8'
 		);

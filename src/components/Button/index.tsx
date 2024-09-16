@@ -20,7 +20,9 @@ const Button = (props: ButtonProps): ReactElement => {
 			type={props.type ?? 'button'}
 			name={props.name}
 			disabled={props.disabled}
-			className={`py-2 px-4 ${backgroundStyle} text-base font-bold text-neutral-100 rounded-md ${props.className}`}
+			className={`py-2 px-4 ${backgroundStyle} text-base font-bold text-neutral-100 rounded-md ${
+				props.className ?? ''
+			}`}
 			onClick={props.onClick}>
 			{props.children}
 		</button>

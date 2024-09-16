@@ -23,7 +23,9 @@ const inter = Inter({
 const RootLayout = (props: RootLayoutProps): ReactElement => {
 	return (
 		<html lang='en' className={inter.variable}>
-			<body className='bg-slate-100 min-w-[640px]'>{props.children}</body>
+			<body className='bg-slate-100 min-w-[640px] text-neutral-900'>
+				{props.children}
+			</body>
 		</html>
 	);
 };

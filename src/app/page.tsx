@@ -4,8 +4,9 @@ import type { ReactElement } from 'react';
 
 import { useState } from 'react';
 
-import Tiptap from 'components/TipTap';
 import TopBar from 'components/Topbar';
+
+import Tiptap from './TipTap';
 
 const Home = (): ReactElement => {
 	const [editMode, setEditMode] = useState(false);

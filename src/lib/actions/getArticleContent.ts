@@ -9,13 +9,14 @@ const getArticleContent = async () => {
 
 	try {
 		articleContent = await promises.readFile(
-			process.cwd() + '/public/content.txt',
+			process.cwd() + '/public/content.html',
 			'utf8'
 		);
+		// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	} catch (error) {
 		try {
 			await promises.writeFile(
-				process.cwd() + '/public/content.txt',
+				process.cwd() + '/public/content.html',
 				articleContent,
 				'utf8'
 			);
